@@ -1,0 +1,428 @@
+html
+{
+ height: 100%; /*стили до 37-ой строки -это решение  для прижатия страницы к краям браузера сверху и снизу*/
+}
+
+body
+{
+ display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  height: 100%;
+}
+
+div.HEADmob
+{
+  /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 0 0 auto;
+  -webkit-box-flex: 0 0 auto;
+  -moz-box-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  background: #F8F8FF;       
+}
+
+div.HEAD
+{
+  /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 0 0 auto;
+  -webkit-box-flex: 0 0 auto;
+  -moz-box-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+}
+
+div.MAIN_CONTENT
+{
+  /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 1 0 auto;
+  -webkit-box-flex: 1 0 auto;
+  -moz-box-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+  background: #F8F8FF;
+}
+
+div.FOOT
+{
+  /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 0 0 auto;
+  -webkit-box-flex: 0 0 auto;
+  -moz-box-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+
+
+div.HEADmob
+{
+ display: flex;  
+ -display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;                 
+ box-shadow: 0px 5px 5px lightgray;  
+ align-items: center; 
+ position: fixed; top: 0;
+ width: 100%;  
+ background: #FFFFFF; 
+ z-index: 3;             
+} 
+
+div.MenuLevel1 { width: 30px; height: 35px; } /* В этом блоке стили для выпадающего мобильного меню */
+div.MenuLevel1 > div { position: relative; cursor: pointer }
+div.MenuLevel2 { width: 180px;  line-height: 50px;  text-align: center; display: none; background: #FFFFFF;  box-shadow: 10px 5px 7px lightgray; }
+div.MenuLevel2 > div { margin: 20px 10px;  background-color: #FFDD01;  }
+div.MenuLevel1 > div:hover div.MenuLevel2 { display: block;  position: absolute; left: 0%; top: 100%; z-index: 4; }
+a.ML2 {  text-decoration: none; font:  bold 20px Lato, Helvetica,  Arial, sans-serif;  color: #151515;  }
+a.ML2:hover {color: #151515;} /*Утяжеляет вес селектора, чтобы на странице Контакты меню не становилось желтым*/
+
+div.HEAD
+{
+  display: flex; 
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;                  
+  box-shadow: 0px 5px 5px lightgray;  
+  align-items: center; 
+  position: fixed; top: 0;
+  width: 100%;  
+  background: #FFFFFF; 
+  z-index: 3;             
+}              
+
+div.MENU
+{
+  flex: 15 1 0px;
+  -webkit-box-flex: 15 1 0px;
+  -moz-box-flex: 15 1 0px;
+  -ms-flex: 15 1 0px;
+  -webkit-flex: 15 1 0px;
+  order: 2;
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -ms-flex-order: 2;
+  -webkit-order: 2;  
+
+}
+
+div.LOGO
+{
+ flex: 1 1 200px;
+ -webkit-box-flex: 1 1 200px;
+ -moz-box-flex: 1 1 200px;
+ -ms-flex: 1 1 200px;
+ -webkit-flex: 1 1 200px;
+  order: 1;
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1;  
+  margin-left: 139px;
+}
+
+span.slogan
+{
+  display: block;
+  font-size: 10px;
+  line-height: 1.1;
+  margin-left: 46px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: grey; 
+}
+
+span.slogan-w
+{
+  display: block;
+  font-size: 10px;
+  line-height: 1.1;
+  margin-left: 46px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: lightgrey; 
+}
+
+li.MENU 
+{
+  display: inline-block;
+  font-family: Montserrat, Helvetica,  Arial, sans-serif;
+  font-size: 18px;
+  color: grey;  
+  padding: 10px;
+  border: 1px solid transparent;                 
+}
+
+li.MENU:first-child~li.MENU
+{
+margin-left: 100px;
+}
+
+a.MENU
+{
+  text-decoration: none;
+  color: grey; 
+} 
+
+li.MENU:hover
+{
+  color: #FFDD01;
+  padding: 5px 10px 5px 10px;
+  background: url('images/lt.gif') no-repeat left top,  url('images/rt.gif') no-repeat right top, url('images/lb.gif') no-repeat left bottom,  url('images/rb.gif') no-repeat right bottom;               
+}        
+
+ul li a.MENU:hover
+{
+  color: #FFDD01; 
+}
+
+ul li a.MENU:target
+{
+  color: #FFDD01; outline: none;
+}
+
+a#StartHome
+{
+  color: #FFDD01;
+}
+
+a#StartHome.MENU:hover {
+  color: #FFDD01;
+}
+
+
+
+a.FOOT:target
+{
+  color: #FFDD01; outline: none;
+}
+
+div.FOOT
+{ 
+  width: 100%;
+  height: 400px;
+  background-color: #292929;   
+  text-align: center;                                                 
+}
+
+div.F_LOGO
+{ 
+  display: inline-block;
+  text-align: center; 
+  margin-top: 100px;
+} 
+
+div.F_SN
+{  
+  margin-top: 20px;
+}
+
+div.F_SN>div
+{
+  display: inline-block;
+  margin: 20px 30px;
+}
+
+div.F_SN>svg
+{
+ fill: lightgrey;
+}
+
+span.F_SN-name
+{
+  font-family: Montserrat, Helvetica,  Arial, sans-serif;
+  color: lightgrey;
+}
+
+div.F_SN_Ant:hover>span.F_SN-name
+{
+ color: #FFDD01;
+}
+
+div.F_SN_Kri:hover>span.F_SN-name
+{
+ color: #FFDD01;
+}
+
+path
+{
+ fill: lightgrey; 
+}
+
+svg
+{
+  margin: 10px 10px;
+}
+
+g:hover>path
+{
+ fill: #FFDD01; 
+}
+
+.Developer /*Дописать HTML*/
+{
+ font-family: Montserrat, Helvetica,  Arial, sans-serif;
+ color: lightgrey;
+ font-size: 10px; 
+ text-align: right;
+ margin-top: 65px;
+ padding-right: 5px;  
+ display: block;
+}
+
+a.value
+{
+  text-decoration: none;
+  font-family: Montserrat, Helvetica,  Arial, sans-serif;
+  color: lightgrey;
+}
+
+
+
+
+
+@media all and (max-width: 1200px)
+{
+  div.LOGO
+  {margin-left: 20px;}
+
+  li.MENU:first-child~li.MENU
+  {margin-left: 50px;} 
+}
+
+@media all and (max-width: 850px)
+{
+  li.MENU:first-child~li.MENU
+  {margin-left: 30px;} 
+
+  div.HEAD
+  {flex-direction: column;
+   -webkit-box-orient: vertical;
+   -moz-box-orient: vertical;
+   -ms-flex-direction: column;
+   -webkit-flex-direction: column;
+  }
+
+  div.MENU
+  {flex: 1 1 0px;
+   -webkit-box-flex: 1 1 0px;
+    -moz-box-flex: 1 1 0px;
+    -ms-flex: 1 1 0px;
+    -webkit-flex: 1 1 0px;
+  }
+
+  div.LOGO
+  {flex: 1 1 0px;
+   -webkit-box-flex: 1 1 0px;
+   -moz-box-flex: 1 1 0px;
+   -ms-flex: 1 1 0px;
+   -webkit-flex: 1 1 0px;
+   transform: scale(0.8);
+  }
+
+  ul.MENU
+  {margin: 0px; padding-left: 0px;}
+
+  li.MENU 
+  {font-size: 16px; padding: 5px;}
+
+  li.MENU:first-child~li.MENU
+  {margin-left: 60px;}
+
+  div.HEAD {
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    height: 75px; /*чтобы наверняка сработал flex в IE*/
+  }
+}
+
+@media all and (max-width: 600px)
+{
+ div.FOOT
+ {display: flex; 
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+ }
+
+ div.F_LOGO
+ {flex: 1 1 0px;
+  -webkit-box-flex: 1 1 0px;
+  -moz-box-flex: 1 1 0px;
+  -ms-flex: 1 1 0px;
+  -webkit-flex: 1 1 0px; 
+  order: 2;
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -ms-flex-order: 2;
+  -webkit-order: 2;    
+  margin: 35px;
+ }
+
+ div.F_SN
+ {flex: 5 1 0px;
+  -webkit-box-flex: 5 1 0px;
+  -moz-box-flex: 5 1 0px;
+  -ms-flex: 5 1 0px;
+  -webkit-flex: 5 1 0px; 
+  order: 1;
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1; 
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex; 
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+ } 
+
+ .Developer
+ {   
+  text-align:center;
+  margin-top: 20px;
+ } 
+
+ div.HEAD
+ {display: none;}
+
+ 
+}
+
+@media all and (min-width: 600px)  
+{
+  div.HEADmob
+  {display: none;}
+}
+
+@media all and (max-width: 300px)
+{
+ div.FOOT
+ {height: 560px;}
+ div.F_LOGO 
+ {display: none;}
+}

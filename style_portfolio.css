@@ -1,0 +1,211 @@
+a#StartHome {
+  color: gray;
+}
+
+
+div.BREAD_Crumbs {
+  margin-top: 70px;
+  width: 100%;    
+  background: url('images/04.jpg') left top;
+  background-size: cover;
+  text-align: center;
+}
+
+span.BREAD_H {
+  display: inline-block;
+  font-family: Montserrat, Helvetica,  Arial, sans-serif;
+  font-size: 60px;
+  color: #FFFFFF; 
+  text-shadow: 1px 1px 0px black;
+  margin-top: 50px; 
+}
+
+ol.breadcrumb {
+  margin-top: 50px;
+  padding: 0px 0px 50px 0px;
+}
+
+li.prev {
+  display: inline-block; 
+  padding: 10px;
+  border: 1px solid transparent;              
+}
+
+a.prev {
+  font-family: Lato, Helvetica,  Arial, sans-serif;
+  font-size:18px;
+  text-decoration: none;
+  color: #FFDD01;  
+  text-shadow: 1px 1px 0px black;                
+}
+
+li.active {
+  font-family: Lato, Helvetica,  Arial, sans-serif;
+  font-size: 18px;                   
+  color: #FFFFFF; 
+  display: inline-block; 
+  text-shadow: 1px 1px 0px black;                
+}
+
+li.arrow {
+  font-weight: bold;                   
+  color: lightgrey; 
+  display: inline-block;                 
+}
+
+
+
+.MAIN_CONTENT {
+  text-align: center;
+}
+
+div.PORTFOLIO {
+  text-align: center;
+  position: relative;  
+  height: 1000px;
+}
+
+/* радиокнопки скрыты */
+input.SRadioFolder {
+  display: none;
+}
+
+/* но их метки видны и выстраиваются в линейку */
+input.SRadioFolder+label {
+  float: left;
+  font-family: Lato, Helvetica,  Arial, sans-serif;
+  font-size:18px;
+  color: #151515;        
+  cursor: pointer;
+  display: block;  
+  padding: 0px 60px 0px 60px;    
+  line-height: 3.5em;  
+}  
+
+/* первая радиокнопка распологается ближе к центру экрана */
+input.SRadioFolder:first-child + label {
+  margin-left: 33%;  
+}
+
+
+/* метка выбранной радиокнопки - желтый цвет и курсор-стрелка над ней вместо пальчика*/
+input.SRadioFolder:checked + label {
+  color: #FFDD01;
+  cursor: default;       
+}
+
+/* все контенты обычно не видны */
+input.SRadioFolder + label + div {
+  display: none;
+}
+
+/* контент выбранной радиокнопки виден */
+input.SRadioFolder:checked + label + div {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 3.5em;    
+  padding: 10px;
+}
+
+div.FOLDER1, div.FOLDER2 {
+ overflow: auto;
+ height: 900px;
+}
+
+div.SFolderDiv>img {
+  width: 60%;
+  margin-top: 15px;
+  text-align: center;
+  padding: 8px;
+  background-color: #FFFFFF;
+  box-shadow: 5px 7px 7px gray;
+  
+}
+
+
+a.BUTTON
+{
+ border: solid #FFDD01 3px;
+ text-decoration: none;
+ color:  #FFDD09;
+ font-family: "Lato", Helvetica, Arial, sans-serif;
+ font-weight: 800;
+ letter-spacing: .05em;
+ padding: 15px 50px;
+ margin: 0px 0px 25px 0px;
+ display: inline-block;
+}
+
+a.BUTTON:hover
+{                  
+ color:  #151515;                  
+ background-color:  #FFDD01;
+}
+
+a.SP 
+{
+  display: inline-block;
+  text-decoration: none;
+  margin: 0px 0px 80px 0px;
+  font-family: Lato, Montserrat, Helvetica,  Arial, sans-serif;
+ font-size: 15px;  
+ color: #9B9B9C;
+}
+
+a.value:hover {
+  color: #FFDD01;
+}
+    
+
+
+
+
+@media all and (max-width: 1200px) {
+  input.SRadioFolder:first-child + label
+  {margin-left: 25%;}
+
+  div.SFolderDiv>img
+  {  width: 70%; }
+}
+
+@media all and (max-width: 800px) {
+  input.SRadioFolder:first-child + label
+  {margin-left: 15%;}
+}
+
+@media all and (max-width: 700px) {
+  input.SRadioFolder:first-child + label
+  {margin-left: 5%;}
+  
+  input.SRadioFolder+label
+  {float: none;   line-height: 1.5em;}
+
+  a.BUTTON
+  {padding: 15px;} 
+}
+
+@media all and (max-width: 600px) {
+  div.BREAD_Crumbs
+  {display: none;}
+
+  div.PORTFOLIO
+  {margin-top: 40px;}
+
+  div.SFolderDiv>img
+  {width: 100%;} 
+
+  a.BUTTON
+  {padding: 15px 5px;} 
+  
+}
+
+@media all and (max-width: 350px) {
+ input.SRadioFolder+label
+ {padding: 0px; font-size: 14px;}
+
+ div.SFolderDiv>img
+ {padding: 0px;}
+
+}
+
